@@ -44,7 +44,13 @@ Optionally, you can set the width of the container div uisng CSS.
 
 #### JavaScript
 
-Initialize the game by making a call to the *Minesweeper()* function and passing the customizations that you want as a parameter.
+First, clone/download this repo in your project's folder and then include the JS file in your we app.
+
+```html
+<script src="./Minesweeper/mines.min.js"></script>
+```
+
+Then, initialize the game by making a call to the *Minesweeper()* function and passing the customizations that you want as a parameter.
 
 ```html
 <script>
