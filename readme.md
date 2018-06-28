@@ -44,7 +44,7 @@ Optionally, you can set the width of the container div uisng CSS.
 
 #### JavaScript
 
-Initialize the game by making a call to the **Minesweeper** function and passing the customizations that you want as a parameter.
+Initialize the game by making a call to the *Minesweeper()* function and passing the customizations that you want as a parameter.
 
 ```html
 <script>
@@ -57,4 +57,6 @@ Initialize the game by making a call to the **Minesweeper** function and passing
 ```
 
 The parameter being passed is an object with the following properties -:
-* **size** (optional) - Specifies the size of the grid (8x8 in this case). 
+* **size** (optional) - Specifies the size of the grid (8x8 in this case). Default value - 8.
+* **minesCount** (optional) - Specifies the numbe rof mines in the grid (10 in this case). Default value - 10.
+* **elementId** (mandatory) - Specifies the **id** of the DOM element that contains the game (```mine-container``` in this case).
