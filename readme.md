@@ -7,9 +7,8 @@ A simple API to include the classic **minesweeper** game in your web apps. With 
 
 Demo links : 
 
-[View it on surge.sh](https://boring-minesweeper.surge.sh/)
-
-[View it on Codepen](https://codepen.io/animeshk874/pen/wXQGrZ)
+* [View it on surge.sh](https://boring-minesweeper.surge.sh/)
+* [View it on Codepen](https://codepen.io/animeshk874/pen/wXQGrZ)
 
 
 ## Usage
@@ -78,6 +77,5 @@ The parameter being passed is an object with the following properties -:
 
 ## Demo
 
-[View it on surge.sh](https://boring-minesweeper.surge.sh/)
-
-[View it on Codepen](https://codepen.io/animeshk874/pen/wXQGrZ)
+* [View it on surge.sh](https://boring-minesweeper.surge.sh/)
+* [View it on Codepen](https://codepen.io/animeshk874/pen/wXQGrZ)
