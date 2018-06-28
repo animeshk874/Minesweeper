@@ -2,12 +2,12 @@
 
 
 
-(function cacheResources(){
+function cacheResources(flag, mine){
     var imgElOne = document.createElement("img");
-    imgElOne.src = "./Minesweeper/images/flag.PNG";
+    imgElOne.src = flag;
     var imgElTwo = document.createElement("img");
-    imgElTwo.src = "./Minesweeper/images/mine.PNG";
-})();
+    imgElTwo.src = mine;
+}
 
 
 //The function that will be called by the user
@@ -15,6 +15,9 @@ function Minesweeper(paramObj){
     var size = paramObj.size || 8; // 8 is the default size
     var minesCount = paramObj.minesCount || 10; // 10 is the default number of mines
     var elementId;
+    var flagIcon = paramObj.flagIcon || "https://boring-minesweeper.surge.sh/Minesweeper/images/flag.png";
+    var mineIcon = paramObj.mineIcon || "https://boring-minesweeper.surge.sh/Minesweeper/images/mine.png";
+    cacheResources(flagIcon, mineIcon);
     if(!(paramObj.elementId)){
         console.error("Invalid DOM Element ID.");
         return;
@@ -26,7 +29,7 @@ function Minesweeper(paramObj){
     var mineMatrixCreatorInstance = mineMatrixCreator(size, minesCount);
     var mineMatrix = mineMatrixCreatorInstance.buildMineMatrix();
 
-    var UIInstance = UIRenderer(elementId, minesCount, mineMatrix);
+    var UIInstance = UIRenderer(elementId, minesCount, mineMatrix, flagIcon, mineIcon);
     UIInstance.renderUI();
 
 }
@@ -114,7 +117,7 @@ function mineMatrixCreator(size, minesCount){
 
 
 //-------------------------UI Renderer Below-----------------------------------
-function UIRenderer(elementId, minesCount, mineMatrix){
+function UIRenderer(elementId, minesCount, mineMatrix, flagIcon, mineIcon){
     var publicAPI, mineClickTopic = elementId + "mineClicked";
     var size = mineMatrix.length;
     //mineClickTopic is the topic that will be published when a mine is clicked
@@ -173,7 +176,7 @@ function UIRenderer(elementId, minesCount, mineMatrix){
                 if(mineMatrix[i][j] === 'M'){
                     let tempEl = el2;
                     $.subscribe(mineClickTopic, function(){
-                        tempEl.style.background = "url(./Minesweeper/images/mine.PNG) #ccc";
+                        tempEl.style.background = "url(" + mineIcon + ") #ccc";
                         tempEl.style.backgroundSize = "contain";
                     });
                 }
@@ -212,7 +215,7 @@ function UIRenderer(elementId, minesCount, mineMatrix){
                     $(this).removeClass("flagged");
                 }
                 else if(mineMatrix[i][j] !== -1){ // check if the element is already opened
-                    this.style.background = "url(./Minesweeper/images/flag.PNG) #ccc";
+                    this.style.background = "url(" + flagIcon + ") #ccc";
                     this.style.backgroundSize = "contain";
                     $(this).addClass("flagged");
                 }
