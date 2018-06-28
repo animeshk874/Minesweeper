@@ -5,6 +5,7 @@
 A simple API to include the classic **minesweeper** game in your web apps. With customization options, you can set the grid size, number of mines etc. - all that within a file of size ~ 6KB.
 
 Demo links : 
+
 [View it on surge.sh](https://boring-minesweeper.surge.sh/)
 
 ## Usage
@@ -19,6 +20,7 @@ Include these ```script``` tags within the ```head``` tags.
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-tiny-pubsub/0.7.0/ba-tiny-pubsub.min.js"></script>
 ```
 
+
 #### Markup
 
 Create a ```div``` that will act as a container for the Minesweeper grid.
@@ -26,6 +28,7 @@ Create a ```div``` that will act as a container for the Minesweeper grid.
 ```html
 <div id="mine-container"></div>
 ```
+
 
 #### CSS
 
@@ -39,3 +42,19 @@ Optionally, you can set the width of the container div uisng CSS.
 ```
 
 
+#### JavaScript
+
+Initialize the game by making a call to the **Minesweeper** function and passing the customizations that you want as a parameter.
+
+```html
+<script>
+    Minesweeper({
+        size: 8,
+        minesCount: 10,
+        elementId: "mine-container"
+    });
+</script>
+```
+
+The parameter being passed is an object with the following properties -:
+* **size** (optional) - Specifies the size of the grid (8x8 in this case). 
