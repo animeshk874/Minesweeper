@@ -1,6 +1,6 @@
 # Minesweeper
 
-##Overview
+## Overview
 
 A simple API to include the classic **minesweeper** game in your web apps. With customization options, you can set the grid size, number of mines etc. - all that within a file of size ~ 6KB.
 
@@ -18,4 +18,24 @@ Include these ```script``` tags within the ```head``` tags.
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-tiny-pubsub/0.7.0/ba-tiny-pubsub.min.js"></script>
 ```
+
+#### Markup
+
+Create a ```div``` that will act as a container for the Minesweeper grid.
+
+```html
+<div id="mine-container"></div>
+```
+
+#### CSS
+
+Optionally, you can set the width of the container div uisng CSS.
+
+```CSS
+#mine-container{
+    width: 500px;
+    max-width: 95%;
+}
+```
+
 
