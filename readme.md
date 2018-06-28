@@ -57,12 +57,16 @@ Then, initialize the game by making a call to the *Minesweeper()* function and p
     Minesweeper({
         size: 8,
         minesCount: 10,
-        elementId: "mine-container"
+        elementId: "mine-container",
+        flagIcon: "https://boring-minesweeper.surge.sh/Minesweeper/images/flag.png",
+        mineIcon: "https://boring-minesweeper.surge.sh/Minesweeper/images/mine.png"
     });
 </script>
 ```
 
 The parameter being passed is an object with the following properties -:
 * **size** (optional) - Specifies the size of the grid (8x8 in this case). Default value - 8.
-* **minesCount** (optional) - Specifies the numbe rof mines in the grid (10 in this case). Default value - 10.
+* **minesCount** (optional) - Specifies the number of mines in the grid (10 in this case). Default value - 10.
 * **elementId** (mandatory) - Specifies the **id** of the DOM element that contains the game (```mine-container``` in this case).
+* **flagIcon** (optional) - Specifies the image that is to be used as flag icon.
+* **mineIcon** (optional) - Specifies the image that is to be used as mine icon.
