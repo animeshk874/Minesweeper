@@ -1,5 +1,6 @@
 # Minesweeper
 
+
 ## Overview
 
 A simple API to include the classic **minesweeper** game in your web apps. With customization options, you can set the grid size, number of mines etc. - all that within a file of size ~ 6KB.
@@ -7,6 +8,8 @@ A simple API to include the classic **minesweeper** game in your web apps. With 
 Demo links : 
 
 [View it on surge.sh](https://boring-minesweeper.surge.sh/)
+[View it on Codepen](https://codepen.io/animeshk874/pen/wXQGrZ)
+
 
 ## Usage
 
@@ -44,7 +47,7 @@ Optionally, you can set the width of the container div uisng CSS.
 
 #### JavaScript
 
-First, clone/download this repo in your project's folder and then include the JS file in your we app.
+First, clone/download this repo in your project's folder and then include the ```mines.min.js``` file in your web app.
 
 ```html
 <script src="./Minesweeper/mines.min.js"></script>
@@ -70,3 +73,9 @@ The parameter being passed is an object with the following properties -:
 * **elementId** (mandatory) - Specifies the **id** of the DOM element that contains the game (```mine-container``` in this case).
 * **flagIcon** (optional) - Specifies the image that is to be used as flag icon.
 * **mineIcon** (optional) - Specifies the image that is to be used as mine icon.
+
+
+## Demo
+
+[View it on surge.sh](https://boring-minesweeper.surge.sh/)
+[View it on Codepen](https://codepen.io/animeshk874/pen/wXQGrZ)
