@@ -287,6 +287,10 @@ function UIRenderer(elementId, minesCount, mineMatrix, flagIcon, mineIcon){
                 countElementsLeft--;
                 if(countElementsLeft === 0){
                     alert("You won!");
+                    var closedEls = document.querySelectorAll("#" + elementId + " .closed");
+                    for(let i = 0; i < closedEls.length; i++){
+                        closedEls[i].style.pointerEvents = "none";
+                    }
                 }
             }
             
